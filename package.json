@@ -1,0 +1,29 @@
+{
+  "name": "grunt-replace-configvalues",
+  "version": "0.0.1",
+  "description": "Replace values in a config.js file by grunt.",
+  "main": "grunt-replace-configvalues.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://petershaw@github.com/petershaw/grunt-replace-configvalues.git"
+  },
+  "keywords": [
+    "grunt",
+    "config",
+    "replace",
+    "deployment"
+  ],
+  "author": " <Peter Shaw>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petershaw/grunt-replace-configvalues/issues"
+  },
+  "homepage": "https://github.com/petershaw/grunt-replace-configvalues",
+  "dependencies": {
+    "string": "^2.0.1",
+    "underscore": "^1.7.0"
+  }
+}
