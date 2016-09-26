@@ -56,7 +56,7 @@ ci-servers are build the projet.
 I always use local dev parameters inside the porojet and jenkis replace them with the correkt values 
 for the stage and production cluster servers. 
 
-Hope it helps you.
+Hope it helps you too to manage your project deployments from Jenkins or any other ci-server.
 
 How
 ---
@@ -87,14 +87,68 @@ Than inside the Gruntfile.js:
    grunt.registerTask('default', ['configvalues']);
 ```
 
+Multiple files are supported since Version 1.0.0:
+
+```javascript
+
+   // load the task
+   grunt.loadNpmTasks('grunt-string-replace');
+
+   // configure the task
+   grunt.initConfig({
+       	configvalues: {
+		options: {
+		   src: ['./config.js', './hosts.js']
+		}
+	}	
+   });  
+
+   // and than run the task
+   grunt.registerTask('default', ['configvalues']);
+```
+
+You can replace json files in version 1.0.0, too:
+```javascript
+
+   // load the task
+   grunt.loadNpmTasks('grunt-string-replace');
+
+   // configure the task
+   grunt.initConfig({
+       	configvalues: {
+		options: {
+		   src: ['./config.js', './hosts.json']
+		}
+	}	
+   });  
+
+   // and than run the task
+   grunt.registerTask('default', ['configvalues']);
+```
+
+If you have to set the file from the command line, you can do now with Version 1.0.0:
+
+```
+grunt --conf:host=127.0.0.1 --conffiles=hosts.js
+```
+
+Or even with a list of files: 
+
+```
+grunt --conf:host=127.0.0.1 --conffiles=hosts.js,config.json
+```
+
+
 
 Limitations
 ---------------
 
-*  This tool only works if the start of the config file starts with:
+*  At this time, there is no way to set the config parameter inside of the Gruntfile.js. 
+Just say --conf:_key_=_value_  at an argument of the grunt command line.
 
-```javascript
-   module.exports = 
-```
 
-*  At this time, there is no way to set the config parameter inside of the Gruntfile.js. Just --conf:_key_=_value_ works in this version.
+Donate 
+---------------
+If you like this tutorial and want to say thanks, than please spend a fraction of a 
+BitCoin to: 1DtvkCh28zqarTEUHtxs7gWtutsv2Cnf9d
+
