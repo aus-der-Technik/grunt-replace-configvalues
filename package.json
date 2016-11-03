@@ -7,7 +7,7 @@
 		"underscore": "^1.7.0",
 		"string": "^2.0.1"
 	},
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"homepage": "https://github.com/petershaw/grunt-replace-configvalues",
 	"name": "grunt-replace-configvalues",
