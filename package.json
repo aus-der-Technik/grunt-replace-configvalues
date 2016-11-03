@@ -13,7 +13,7 @@
 	"name": "grunt-replace-configvalues",
 	"description": "Replace values in a config.js file by grunt.",
 	"repository": {
-		"url": "https://petershaw@github.com/petershaw/grunt-replace-configvalues.git",
+		"url": "https://github.com/petershaw/grunt-replace-configvalues.git",
 		"type": "git"
 	},
 	"main": "tasks/grunt-replace-configvalues.js",
