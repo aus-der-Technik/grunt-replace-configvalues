@@ -58,8 +58,9 @@ module.exports = function (grunt) {
 				_.each(confparam, function(p){
 					var path = S(p).replace('--conf:', '').s;
 					var keyval = path.split("=");
-					
-					selectPathAndReplaceWith(buildconf, keyval[0], keyval[1]);
+					var key = keyval.shift();
+					var value = keyval.join("=");
+					selectPathAndReplaceWith(buildconf, key, value);
 				});
 				var data = "";
 				if(S(src).endsWith(".js")){
