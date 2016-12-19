@@ -149,6 +149,6 @@ Just say --conf:_key_=_value_  at an argument of the grunt command line.
 
 Donate 
 ---------------
-If you like this tutorial and want to say thanks, than please spend a fraction of a 
-BitCoin to: 1DtvkCh28zqarTEUHtxs7gWtutsv2Cnf9d
+If you like this module and want to say thanks, than please spend a tiny fraction of a 
+BitCoin to: 1FaKEmpUz7S1g4v5qgmDWwQDzVYGBM6MLw
 
