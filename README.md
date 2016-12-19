@@ -1,7 +1,7 @@
 grunt-replace-configvalues
 ==========================
 
-Replace values in a config.js file by grunt.
+Replace values in a config.js or config.json file by grunt.
 
      **--conf:key.subkey=new_value**
 
