@@ -4,7 +4,7 @@
 		"mocha": "^3.2.0",
 		"fs-extra": "^1.0.0"
 	},
-	"homepage": "https://github.com/petershaw/grunt-replace-configvalues",
+	"homepage": "https://www.ausdertechnik.de",
 	"description": "Replace values in a config.js file by grunt.",
 	"keywords": [
 		"grunt",
@@ -13,22 +13,22 @@
 		"deployment"
 	],
 	"repository": {
-		"url": "https://github.com/petershaw/grunt-replace-configvalues.git",
+		"url": "https://github.com/aus-der-Technik/grunt-replace-configvalues",
 		"type": "git"
 	},
 	"name": "grunt-replace-configvalues",
 	"author": "aus der Technik",
 	"bugs": {
-		"url": "https://github.com/petershaw/grunt-replace-configvalues/issues"
+		"url": "https://github.com/aus-der-Technik/grunt-replace-configvalues/issues"
 	},
 	"scripts": {
 		"test": "find ./tests -name '*Test.js' | xargs mocha -R spec"
 	},
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"license": "MIT",
 	"main": "tasks/grunt-replace-configvalues.js",
 	"dependencies": {
 		"underscore": "^1.7.0",
-		"string": "^2.0.1"
+		"string": "^3.3.3"
 	}
 }
