@@ -108,6 +108,7 @@ Multiple files are supported since Version 1.0.0:
 ```
 
 You can replace json files in version 1.0.0, too:
+
 ```javascript
 
    // load the task
@@ -138,6 +139,13 @@ Or even with a list of files:
 grunt --conf:host=127.0.0.1 --conffiles=hosts.js,config.json
 ```
 
+Arrays
+---------------
+You can, replace a value with an array:
+
+```
+grunt --conf:hosts=["192.0.3.12", "192.0.3.13"]
+```
 
 
 Limitations
