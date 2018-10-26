@@ -12,6 +12,9 @@ module.exports = function (grunt) {
         var parts = path.split(".");
         var last = parts.pop();
         _.each(parts, function(part){
+        	if(_.has(cur, part) === false){
+        		cur[part] = {};
+        	}
             cur = cur[part];
         });
         try {
