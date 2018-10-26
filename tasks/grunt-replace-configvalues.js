@@ -11,18 +11,37 @@ module.exports = function (grunt) {
         var cur = obj;
         var parts = path.split(".");
         var last = parts.pop();
+        var depth = 0;
         _.each(parts, function(part){
-        	if(_.has(cur, part) === false){
-        		cur[part] = {};
-        	}
+        	try { 
+        		if(cur[part] === null ){
+        			if(depth > 0 ){
+	        			cur[part] = {};
+    	    		} else {
+	    	    		depth = -1;
+	     		   		return;
+	     	   		}
+	        	}
+        	} catch (e){ return; }
+        	++depth;
             cur = cur[part];
         });
+        if(depth === -1){ return; }
+        
         try {
             replm = JSON.parse(replm)   
         } catch(e) { replm = replm; }
+        
         if(_.has(cur, last)){
             console.log("Replace "+ last +" with "+ replm);
             cur[last] = replm;
+        } else {
+        	if( cur === null || cur === undefined){ cur = {}; }
+        	if(depth === (parts.length) && depth > 0){
+	          console.log("Add "+ last +" with "+ replm);
+	          if(cur[last] === null){ cur[last] = {}; }
+     	      cur[last] = replm;
+     	   }
         }
     }
 
